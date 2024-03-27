@@ -2,7 +2,7 @@ import React from "react";
 
 type PropType = {
   children: string;
-  level: number;
+  level?: number;
 };
 
 export const Title = ({ children = "", level = 1 }: PropType) => {
