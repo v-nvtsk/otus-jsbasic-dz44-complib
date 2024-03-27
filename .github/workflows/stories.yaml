@@ -3,7 +3,7 @@ name: Build and Publish Storybook to GitHub Pages
 
 on:
   # Event for the workflow to run on
-  push:
+  pull_request:
     branches:
       - "gh-pages" # Replace with the branch you want to deploy from
 
