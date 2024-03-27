@@ -4,5 +4,4 @@ reports
 dist
 .vscode
 *storybook.log
-.loki
 storybook-static
