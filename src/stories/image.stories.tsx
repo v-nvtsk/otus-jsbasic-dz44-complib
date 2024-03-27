@@ -23,9 +23,14 @@ const meta: Meta<typeof Image> = {
 export default meta;
 type Story = StoryObj<typeof Image>;
 
+// export const Primary: Story = {
+//   render: () => <Image url="/image-test.jpg" alt="image" width={200} height={200} />,
+// };
+
 export const Primary: Story = {
   args: {
-    url: "https://images.pexels.com/photos/213413/pexels-photo-213413.jpeg",
+    url: "/image-test.jpg",
+    alt: "image",
     width: 200,
     height: 200,
   },
