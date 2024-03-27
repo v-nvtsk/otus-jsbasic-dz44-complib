@@ -3,20 +3,22 @@ name: Build and Publish Storybook to GitHub Pages
 on: pull_request
 permissions:
   contents: write
-  pages: write
-  id-token: write
-
 jobs:
-  deploy:
+  deploy-to-gh-pages:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
-      - uses: actions/setup-node@v4
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Install Packages
+        run: |
+          npm ci
+
+      - name: Build StoryBook
+        run: |
+          npm run build-storybook
+
+      - name: Deploy 🚀
+        uses: JamesIves/github-pages-deploy-action@v4
         with:
-          node-version: "20.x"
-      - uses: bitovi/github-actions-storybook-to-github-pages@v1.0.3
-        with:
-          install_command: npm ci
-          build_command: npm run build-storybook
-          path: storybook-static
-          checkout: true
+          folder: storybook-static # The folder the action should deploy.
