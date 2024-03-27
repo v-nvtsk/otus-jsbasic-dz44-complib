@@ -1,6 +1,4 @@
 module.exports = {
-  chromeSelector: "#my-decorator > *",
-  diffingEngine: "pixelmatch",
   configurations: {
     "chrome.laptop": {
       target: "chrome.docker",
