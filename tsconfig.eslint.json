@@ -14,7 +14,8 @@
     "webpack.config.js",
     "jest-setup.ts",
     "commitlint.config.ts",
-    "lint-staged.config.js"
+    "lint-staged.config.js",
+    "loki.config.js"
   ],
   "exclude": ["dist", "node_modules", "coverage", "reports"]
 }
